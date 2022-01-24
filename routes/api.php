@@ -5,6 +5,9 @@ use App\Http\Controllers\API\EducationController;
 use App\Http\Controllers\API\JobController;
 use App\Http\Controllers\API\UserController;
 use App\Http\Controllers\API\CompanyController;
+use App\Http\Controllers\API\KostController;
+use App\Http\Controllers\API\RoomController;
+use App\Http\Controllers\API\FacilitiesController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -25,14 +28,10 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('user/photo', [UserController::class, 'updatePhoto']);
     Route::post('logout', [UserController::class, 'logout']);
 
-    Route::post('user/cv', [ApplyController::class, 'uploadFile']);
-    Route::post('upload', [ApplyController::class, 'upload']);
+    Route::post('checkout', [TransactionController::class, 'checkout']);
 
-    Route::post('submit', [ApplyController::class, 'submit']);
-    Route::get('apply', [ApplyController::class, 'all']);
-    Route::post('create', [EducationController::class, 'create']);
-    Route::get('edu', [EducationController::class, 'all']);
-    Route::post('apply/{id}', [ApplyController::class, 'update']);
+    Route::get('transaction', [TransactionController::class, 'all']);
+    Route::post('transaction/{id}', [TransactionController::class, 'update']);
 });
 
 
@@ -44,6 +43,6 @@ Route::post('signup', [UserController::class, 'signup']);
 
 
 
-
-Route::get('job', [JobController::class, 'all']);
-Route::get('company', [CompanyController::class, 'all']);
+Route::get('kost', [KostController::class, 'all']);
+Route::get('room', [RoomController::class, 'all']);
+Route::get('facilities', [FacilitiesController::class, 'all']);

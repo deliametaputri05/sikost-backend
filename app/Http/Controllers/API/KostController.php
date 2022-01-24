@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Helpers\ResponseFormatter;
 use App\Http\Controllers\Controller;
 use App\Models\Kost;
 use Illuminate\Http\Request;
@@ -10,58 +11,46 @@ class KostController extends Controller
 {
     public function all(Request $request)
     {
-        // $company = Company::with('user')->get();
-
-        // return response()->json([
-        //     'company' => $company,
-
-        // ]);
 
 
         $id = $request->input('id');
-        $user_id = $request->input('user');
         $limit = $request->input('limit', 6);
         $name = $request->input('name');
         $category = $request->input('category');
 
         if ($id) {
-            $company = Company::find($id);
+            $kost = Kost::find($id);
 
-            if ($company) {
+            if ($kost) {
                 return ResponseFormatter::success(
-                    $company,
-                    'Data Company berhasil diambil'
+                    $kost,
+                    'Data Kost berhasil diambil'
                 );
             } else {
                 return ResponseFormatter::error(
                     null,
-                    'Data Company tidak ada',
+                    'Data Kost tidak ada',
                     404
                 );
             }
         }
 
+        $kost = Kost::query();
 
-
-        $company = Company::with('user')->get();
-
-        if ($user_id) {
-            $company->where('user_id', $user_id);
-        }
         if ($name) {
-            $company->where('name', 'like', '%' . $name . '%');
+            $kost->where('name', 'like', '%' . $name . '%');
         }
         if ($category) {
-            $company->where('category', 'like', '%' . $category . '%');
+            $kost->where('category', 'like', '%' . $category . '%');
         }
 
-        // return ResponseFormatter::success(
-        //     $company->paginate($limit),
-        //     'Data list company berhasil diambil'
-        // );
-        return response()->json([
-            'company' => $company,
+        return ResponseFormatter::success(
+            $kost->paginate($limit),
+            'Data list Kost berhasil diambil'
+        );
+        // return response()->json([
+        //     'kost' => $kost,
 
-        ]);
+        // ]);
     }
 }

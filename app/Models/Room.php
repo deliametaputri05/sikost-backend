@@ -9,12 +9,18 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Room extends Model
 {
     use HasFactory, SoftDeletes;
+    public $table = "rooms";
 
     protected $fillable = [
         'kost_id', 'name', 'price', 'rate',
         'stock', 'types'
 
     ];
+
+    public function kost()
+    {
+        return $this->hasOne(Kost::class, 'id', 'kost_id');
+    }
 
     public function getCreatedAtAttribute($created_at)
     {

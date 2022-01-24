@@ -21,6 +21,8 @@ class CreateRoomsTable extends Migration
             $table->integer('rate');
             $table->integer('stock');
             $table->string('types');
+
+
             $table->timestamps();
         });
     }

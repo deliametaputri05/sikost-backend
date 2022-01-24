@@ -16,6 +16,11 @@ class Facilities extends Model
 
     ];
 
+    public function room()
+    {
+        return $this->hasOne(Room::class, 'id', 'room_id');
+    }
+
     public function getCreatedAtAttribute($created_at)
     {
         return Carbon::parse($created_at)
