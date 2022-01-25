@@ -218,19 +218,19 @@
                             <a data-toggle="collapse" href="#company">
                                 <!-- <i class="fas fa-layer-group"></i> -->
                                 <i class="far fa-building"></i>
-                                <p>Company</p>
+                                <p>Kost</p>
                                 <span class="caret"></span>
                             </a>
                             <div class="collapse" id="company">
                                 <ul class="nav nav-collapse">
                                     <li>
-                                        <a href="/dashboard/company">
-                                            <span class="sub-item">Data Company</span>
+                                        <a href="/dashboard/kost">
+                                            <span class="sub-item">Data Kost</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/dashboard/company/create">
-                                            <span class="sub-item">Create Company</span>
+                                        <a href="/dashboard/kost/create">
+                                            <span class="sub-item">Create Kost</span>
                                         </a>
                                     </li>
 
@@ -242,19 +242,19 @@
                             <a data-toggle="collapse" href="#jobs">
                                 <!-- <i class="fas fa-layer-group"></i> -->
                                 <i class="far fa-chart-bar"></i>
-                                <p>Jobs</p>
+                                <p>Room</p>
                                 <span class="caret"></span>
                             </a>
                             <div class="collapse" id="jobs">
                                 <ul class="nav nav-collapse">
                                     <li>
                                         <a href="/dashboard/job">
-                                            <span class="sub-item">Data Job</span>
+                                            <span class="sub-item">Data Room</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="/dashboard/job/create">
-                                            <span class="sub-item">Create Job</span>
+                                            <span class="sub-item">Create Room</span>
                                         </a>
                                     </li>
 
@@ -265,14 +265,14 @@
                         <li class="nav-item">
                             <a data-toggle="collapse" href="#sidebarLayouts">
                                 <i class="far fa-envelope"></i>
-                                <p>Apply Jobs</p>
+                                <p>Facillities</p>
                                 <span class="caret"></span>
                             </a>
                             <div class="collapse" id="sidebarLayouts">
                                 <ul class="nav nav-collapse">
                                     <li>
                                         <a href="/dashboard/apply">
-                                            <span class="sub-item">Candidate</span>
+                                            <span class="sub-item">Facillities</span>
                                         </a>
                                     </li>
                                     {{-- <li>

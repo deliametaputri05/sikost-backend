@@ -6,7 +6,7 @@ use App\Http\Controllers\JobController;
 use App\Http\Controllers\ApplyController;
 use App\Http\Controllers\EducationController;
 use App\Http\Controllers\TransactionController;
-use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\KostController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -37,7 +37,7 @@ Route::prefix('dashboard')
         Route::resource('users', UserController::class);
         Route::resource('job', JobController::class);
         Route::resource('apply', ApplyController::class);
-        Route::resource('company', CompanyController::class);
+        Route::resource('kost', KostController::class);
         Route::resource('education', EducationController::class);
 
         // user

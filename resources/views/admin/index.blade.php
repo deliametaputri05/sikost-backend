@@ -33,7 +33,7 @@
 								<div class="col col-stats ml-3 ml-sm-0">
 									<div class="numbers">
 										<p class="card-category">Users</p>
-										<h4 class="card-title">{{$user}}</h4>
+										<h4 class="card-title"></h4>
 									</div>
 								</div>
 							</div>
@@ -52,7 +52,7 @@
 								<div class="col col-stats ml-3 ml-sm-0">
 									<div class="numbers">
 										<p class="card-category">Company</p>
-										<h4 class="card-title">{{ $company }}</h4>
+										<h4 class="card-title"></h4>
 									</div>
 								</div>
 							</div>
@@ -71,7 +71,7 @@
 								<div class="col col-stats ml-3 ml-sm-0">
 									<div class="numbers">
 										<p class="card-category">Job</p>
-										<h4 class="card-title">{{$job}}</h4>
+										<h4 class="card-title"></h4>
 									</div>
 								</div>
 							</div>
@@ -90,7 +90,7 @@
 								<div class="col col-stats ml-3 ml-sm-0">
 									<div class="numbers">
 										<p class="card-category">Candidate</p>
-										<h4 class="card-title">{{ $apply }}</h4>
+										<h4 class="card-title"></h4>
 									</div>
 								</div>
 							</div>
