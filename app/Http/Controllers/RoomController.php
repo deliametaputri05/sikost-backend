@@ -36,7 +36,9 @@ class RoomController extends Controller
     public function create()
     {
         $room = Room::all();
-        return view('admin.room.create', compact('room'));
+        $kost = Kost::all();
+
+        return view('admin.room.create', compact('room', 'kost'));
     }
 
     /**
@@ -74,12 +76,13 @@ class RoomController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id, Kost $kost)
     {
-        $room = Room::find($id);
-        // $room = Room::with('kost')->where('id', $id)->get();
-
-        return view('admin.room.edit', compact('room')
+        // $room = Room::find($id);
+        $room = Room::with('kost')->where('id', $id)->first();
+        $kost = Kost::all();
+// dd($room);
+        return view('admin.room.edit', compact('room', 'kost')
             // 'room' => $room,
             // 'kost' => $kost
 );
@@ -101,7 +104,7 @@ class RoomController extends Controller
         // }
 
         $room->update($data);
-
+// dd($data);
         return redirect()->route('room.index');
     }
 

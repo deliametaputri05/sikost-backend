@@ -68,8 +68,8 @@
                                                         <select class="form-control" id="kos_id" name="kos_id">
                                                             <option value selected>-- Name Kost --</option>
 
-                                                        @foreach ($room as $c)
-                                                            <option value="{{$c->kost->id }}">  {{$c->kost->id }} - {{ $c->kost->name }}</option>
+                                                        @foreach ($kost as $c)
+                                                            <option value="{{$c->id }}">  {{$c->id }} - {{ $c->name }}</option>
                                                         @endforeach
                                                         </select>
                                                     </div>

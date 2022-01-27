@@ -74,15 +74,15 @@
                                                         <select class="form-control" id="kos_id" name="kos_id">
                                                             <option value selected>-- Name Kost --</option>
 
-                                                        @foreach ($room as $c)
-                                                            <option value="{{$c->kost->id }}">  {{$c->kost->id }} - {{ $c->kost->name }}</option>
+                                                        @foreach ($kost as $c)
+                                                            <option value="{{$c->id }}">  {{$c->id }} - {{ $c->name }}</option>
                                                         @endforeach
                                                         </select>
                                                     </div>   
                                                                                         
                                                     <div class="form-group">
                                                         <label for="description">Name Room</label>
-                                                        <input class="form-control" value="{{ old('desc') ?? $room->desc }}" name="name" id="name" placeholder="Name Room">{{ $room->name }}
+                                                        <input class="form-control" value="{{ old('desc') ?? $room->name }}" name="name" id="name" placeholder="Name Room">
                                                     </div>
 
                                                     <div class="form-group">
@@ -105,15 +105,15 @@
                                                         <br>
                                                         <div class=" selectgroup selectgroup-pills">
                                                             <label class="selectgroup-item">
-                                                                <input type="checkbox" name="category" value="new_kos" class="selectgroup-input" checked="{{  $room->types }}">
+                                                                <input type="checkbox" name="types" value="New_kos" class="selectgroup-input" checked="{{  $room->types }}">
                                                                 <span class="selectgroup-button">New Kost</span>
                                                             </label>
                                                             <label class="selectgroup-item">
-                                                                <input type="checkbox" name="category" value=",popular" class="selectgroup-input" checked="{{  $room->types }}">
+                                                                <input type="checkbox" name="types" value="Popular" class="selectgroup-input" checked="{{  $room->types }}">
                                                                 <span class="selectgroup-button">Popular</span>
                                                             </label>
                                                             <label class="selectgroup-item">
-                                                                <input type="checkbox" name="category" value=",recommended" class="selectgroup-input" checked="{{  $room->types }}">
+                                                                <input type="checkbox" name="types" value="Recommended" class="selectgroup-input" checked="{{  $room->types }}">
                                                                 <span class="selectgroup-button">Recommended</span>
                                                             </label>
 

@@ -284,17 +284,17 @@
                                 </ul>
                             </div>
                         </li>   
-                        {{-- <li class="nav-item">
+                        <li class="nav-item">
                             <a data-toggle="collapse" href="#tables">
-                                <i class="far fa-bookmark"></i>
-                                <p>Save Job</p>
+                                <i class="fas fa-money-check"></i>
+                                <p>Transactions</p>
                                 <span class="caret"></span>
                             </a>
                             <div class="collapse" id="tables">
                                 <ul class="nav nav-collapse">
                                     <li>
                                         <a href="tables/tables.html">
-                                            <span class="sub-item">Basic Table</span>
+                                            <span class="sub-item">Data Transactions</span>
                                         </a>
                                     </li>
                                     <li>
@@ -304,7 +304,7 @@
                                     </li>
                                 </ul>
                             </div>
-                        </li> --}}
+                        </li>
                         <li class="nav-item">
                             <a data-toggle="collapse" href="#users">
                                 <i class="far fa-user"></i>
