@@ -64,7 +64,7 @@
                                         <tr>
                                             <td class="text-center">{{ $key+1 }}</td>
                                             <td class="text-center">{{ $item->kost_id }}</td>
-                                            <td class="text-center">{{ $item->kost->name }}</td>
+                                            <td class="text-center">{{ $item->name }}</td>
                                             <td class="text-center">{{ $item->name }}</td>
                                             {{-- <td class="text-center"> <br>   <div class="avatar avatar-xl ">
                                                 <img src="{{ $item->company->picturePath }}" alt="..." class="avatar-img rounded-circle" width="100px">

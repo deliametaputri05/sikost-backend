@@ -55,26 +55,25 @@
                                         </tr>
                                     </thead>
 
-                                    {{-- <tbody>
-                                        @forelse ($room as $key => $item)
+                                    <tbody>
+                                        @forelse ($facilities as $key => $item)
                                         <tr>
                                             <td class="text-center">{{ $key+1 }}</td>
-                                            <td class="text-center">{{ $item->kost_id }}</td>
-                                            <td class="text-center">{{ $item->kost->name }}</td>
-                                            <td class="text-center">{{ $item->name }}</td> --}}
-                                            {{-- <td class="text-center"> <br>   <div class="avatar avatar-xl ">
-                                                <img src="{{ $item->company->picturePath }}" alt="..." class="avatar-img rounded-circle" width="100px">
-                                            </div><br> <br> </td> --}}
+                                            <td class="text-center">{{ $item->room_id }}</td>
+                                            <td class="text-center">{{ $item->name }}</td>
+                                            <td class="text-center"> <br>   <div class="avatar avatar-xl ">
+                                                <img src="{{ $item->picturePath }}" alt="..." class="avatar-img rounded-circle" width="100px">
+                                            </div><br> <br> </td>
                                             {{-- <td class="text-center">Rp.{{ number_format($item->price) }}</td>
                                             <td class="text-center">{{ $item->rate }}</td>
                                             <td class="text-center">{{ $item->stock }}</td>
-                                            <td class="text-center">{{ $item->types }}</td>
-                                            <td> --}}
-                                                {{-- <div class="form-button-action">
-                                                    <a href="{{ route('room.edit', $item->id) }}" type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Room">
+                                            <td class="text-center">{{ $item->types }}</td> --}}
+                                            <td>
+                                                <div class="form-button-action">
+                                                    <a href="{{ route('facilities.edit', $item->id) }}" type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Facilities">
                                                         <i class="fa fa-edit"></i>
                                                     </a>
-                                                    <form action="{{ route('room.destroy', $item->id) }}" method="POST" class="inline-block">
+                                                    <form action="{{ route('facilities.destroy', $item->id) }}" method="POST" class="inline-block">
                                                         {!! method_field('delete') . csrf_field() !!}
                                                         <button type="submit" data-toggle="tooltip" title="" class="btn btn-link btn-danger alert_demo_7" data-original-title="Remove">
                                                             <!-- onclick="return initDemos('.alert_demo_7')"    -->
@@ -90,7 +89,7 @@
                                             <td colspan="6" class="border text-center p-5">Data Tidak Ditemukan</td>
                                         </tr>
                                         @endforelse
-                                    </tbody> --}}
+                                    </tbody>
                                 </table>
                             </div>
                         </div>

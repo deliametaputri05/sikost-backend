@@ -40,4 +40,32 @@ class FacilitiesController extends Controller
 
         return redirect()->route('facilities.index');
     }
+
+    public function edit($id, Room $room)
+    {
+        // $room = Room::find($id);
+        $facilities = Facilities::with('room')->where('id', $id)->first();
+        $room = Room::all();
+// dd($room);
+        return view('admin.facilities.edit', compact('facilities', 'room')
+            // 'room' => $room,
+            // 'kost' => $kost
+);
+    }
+
+    public function update(Request $request, Facilities $facilities)
+    {
+        $data = $request->all();
+
+        $facilities->update($data);
+// dd($data);
+        return redirect()->route('facilities.index');
+    }
+
+    public function destroy(Facilities $facilities)
+    {
+        $facilities->delete();
+
+        return redirect()->route('facilities.index');
+    }
 }
