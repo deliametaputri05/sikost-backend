@@ -1,13 +1,13 @@
 @extends('../admin.layout')
 
-@section('title', 'Data Company')
+@section('title', 'Data Transaction')
 
 @section('container')
 <div class="main-panel">
     <div class="content">
         <div class="page-inner">
             <div class="page-header">
-                <h4 class="page-title">Company</h4>
+                <h4 class="page-title">Transaction</h4>
                 <ul class="breadcrumbs">
                     <li class="nav-home">
                         <a href="#">
@@ -18,7 +18,7 @@
                         <i class="flaticon-right-arrow"></i>
                     </li>
                     <li class="nav-item">
-                        <a href="#">Company</a>
+                        <a href="#">Transaction</a>
                     </li>
                     <li class="separator">
                         <i class="flaticon-right-arrow"></i>
@@ -37,7 +37,7 @@
                                 <h4 class="card-title"></h4>
                                 <a href="/dashboard/company/create" class="btn btn-primary btn-round ml-auto">
                                     <i class="fa fa-plus"></i>
-                                    Add Company
+                                    Add Transaction
                                 </a>
                             </div>
                         </div>
@@ -48,34 +48,30 @@
                                     <thead>
                                         <tr>
                                             <th>ID</th>
-                                            <th>Perusahaan</th>
-                                            <th>Logo</th>
-                                            <th>Industri</th>
-                                            <th>Lokasi</th>
-                                            <th>Tahun Berdiri</th>
+                                            <th>User ID</th>
+                                            <th>Kost ID</th>
+                                            <th>Quantity</th>
+                                            <th>Total</th>
+                                            <th>Status</th>
+                                            <th>Payment url</th>
+                                            <th>dateBooking</th>
+
                                             <th style="width: 10%">Action</th>
                                         </tr>
                                     </thead>
 
                                     <tbody>
-                                        @forelse ($company as $item)
+                                        @forelse ($trans as $item)
                                         <tr>
                                             <td class="text-center">{{ $item->id }}</td>
-                                            <td class="text-center">{{ $item->name }}</td>
-                                            <td>
-                                                <br>
-                                                <div class="avatar avatar-xl ">                                               
-                                                <img src="{{ $item->picturePath }}" alt="..." class="avatar-img rounded-circle" width="100px">
-                                                
-                                            </div>
-                                            <br>
-                                            <br>
-                                        </td>
-                                            <td class="text-center">{{ $item->category }}</td>
-                                            <td class="text-center">{{ $item->location }}</td>
-                                            <td class="text-center">{{ ($item->founded_year) }}</td>
+                                            <td class="text-center">{{ $item->user_id }}</td>
+                                            <td class="text-center">{{ $item->kost_id }}</td>
+                                            <td class="text-center">{{ $item->quantity }}</td>
+                                            <td class="text-center">{{ ($item->total) }}</td>
+                                            <td class="text-center">{{ ($item->status) }}</td>
+                                            <td class="text-center">{{ ($item->payment_url) }}</td>
+                                            <td class="text-center">{{ ($item->dateBooking) }}</td>
 
-                                       
                                             <td>
                                                 <div class="form-button-action">
                                                     <a href="{{ route('company.edit', $item->id) }}" type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Company">
@@ -94,7 +90,7 @@
                                         </tr>
                                         @empty
                                         <tr>
-                                            <td colspan="6" class="border text-center p-5">Data Tidak Ditemukan</td>
+                                            <td colspan="10" class="border text-center p-5">Data Tidak Ditemukan</td>
                                         </tr>
                                         @endforelse
                                     </tbody>

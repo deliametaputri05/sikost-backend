@@ -293,7 +293,7 @@
                             <div class="collapse" id="tables">
                                 <ul class="nav nav-collapse">
                                     <li>
-                                        <a href="tables/tables.html">
+                                        <a href="/dashboard/transaction">
                                             <span class="sub-item">Data Transactions</span>
                                         </a>
                                     </li>
