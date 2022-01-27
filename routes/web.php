@@ -3,7 +3,7 @@
 use App\Http\Controllers\API\MidtransController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\RoomController;
-use App\Http\Controllers\TransactionController;
+use App\Http\Controllers\TransactionsController;
 use App\Http\Controllers\FacilitiesController;
 // use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\KostController;
@@ -36,12 +36,13 @@ Route::prefix('dashboard')
         Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
         Route::resource('users', UserController::class);
         Route::resource('room', RoomController::class);
-        Route::resource('transaction', TransactionController::class);
+        Route::resource('facilities', FacilitiesController::class);
+        // Route::resource('transactions', TransactionsController::class);
         Route::resource('kost', KostController::class);
         Route::resource('education', EducationController::class);
 
         // user
-        // Route::get('user/create', [UserController::class, 'create'])->name('users.create');
+        Route::get('user/create', [UserController::class, 'create'])->name('users.create');
 
 
         Route::get('facilities/create', [FacilitiesController::class, 'create'])->name('facilitieses.create');

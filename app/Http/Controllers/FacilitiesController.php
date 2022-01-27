@@ -1,0 +1,43 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Http\Requests\FacilitiesRequest;
+use App\Models\User;
+use App\Models\Facilities;
+use App\Models\Kost;
+use App\Models\Room;
+use Illuminate\Support\Facades\Auth;
+
+class FacilitiesController extends Controller
+{
+    public function index()
+    {
+        $facilities = Facilities::with(['room'])->paginate();
+
+        return view('admin.facilities.index', [
+            'facilities' => $facilities
+        ]);
+    }
+
+    public function create()
+    {
+        $facilities = Facilities::all();
+        $room       = Room::all();
+
+        return view('admin.facilities.create', compact('facilities', 'room'));
+    }
+
+    public function store(Request $request)
+    {
+
+
+        $data = $request->all();
+        $data['user_id'] = Auth::user()->id;
+        Facilities::create($data);
+        // dd($data);
+
+        return redirect()->route('facilities.index');
+    }
+}

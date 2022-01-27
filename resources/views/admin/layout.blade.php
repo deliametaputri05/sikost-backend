@@ -265,22 +265,16 @@
                         <li class="nav-item">
                             <a data-toggle="collapse" href="#sidebarLayouts">
                                 <i class="fas fa-bed"></i>
-                                <p>Facillities</p>
+                                <p>Facilities</p>
                                 <span class="caret"></span>
                             </a>
                             <div class="collapse" id="sidebarLayouts">
                                 <ul class="nav nav-collapse">
                                     <li>
-                                        <a href="/dashboard/apply">
-                                            <span class="sub-item">Facillities</span>
+                                        <a href="/dashboard/facilities">
+                                            <span class="sub-item">Facilities</span>
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="overlay-sidebar.html">
-                                            <span class="sub-item">File CV</span>
-                                        </a>
-                                    </li>
-
                                 </ul>
                             </div>
                         </li>   
@@ -293,7 +287,7 @@
                             <div class="collapse" id="tables">
                                 <ul class="nav nav-collapse">
                                     <li>
-                                        <a href="/dashboard/transaction">
+                                        <a href="tables/tables.html">
                                             <span class="sub-item">Data Transactions</span>
                                         </a>
                                     </li>
