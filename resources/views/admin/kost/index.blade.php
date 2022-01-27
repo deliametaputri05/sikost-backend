@@ -48,18 +48,19 @@
                                     <thead>
                                         <tr>
                                             <th>ID</th>
-                                            <th>Name</th>
-                                            <th>Picture Path</th>
+                                            <th>Name Kost</th>
+                                            <th>File Kost</th>
                                             <th>Desc</th>
                                             <th>Location</th>
+                                            <th>Category</th>
                                             <th style="width: 10%">Action</th>
                                         </tr>
                                     </thead>
 
                                     <tbody>
-                                        @forelse ($kost as $item)
+                                        @forelse ($kost as $key =>$item)
                                         <tr>
-                                            <td class="text-center">{{ $item->id }}</td>
+                                            <td class="text-center">{{ $key+1 }}</td>
                                             <td class="text-center">{{ $item->name }}</td>
                                             <td>
                                                 <br>

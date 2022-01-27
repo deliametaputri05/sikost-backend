@@ -64,34 +64,27 @@
 
                                                 <div class="col-md-6 col-lg-8">
                                                     <div class="form-group">
-                                                        <label for="name">Nama Perusahaan</label>
+                                                        <label for="name">Name Kost</label>
                                                         <input type="text" class="form-control" id="name" name="name" value="{{ old('name') }}" placeholder="Nama Perusahaan">
 
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="picturePath">Logo</label>
+                                                        <label for="picturePath">Pic Kost</label>
                                                         <input type="file" class="form-control-file" id="picturePath" name="picturePath" placeholder="Logo Perusahaan">
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="desc">Deskripsi Perusahaan</label>
+                                                        <label for="desc">Desc Kost</label>
                                                         <textarea class="form-control" value="{{ old('desc') }}" name="desc" id="desc" rows="3" placeholder="Deskripsi Perusahaan"></textarea>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="location">Lokasi</label>
+                                                        <label for="location">Location</label>
                                                         <input type="text" class="form-control" id="location" name="location" value="{{ old('location') }}" placeholder="Lokasi Perusahaan">
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="position">Kategori</label>
+                                                        <label for="position">Category</label>
                                                         <input type="text" class="form-control" name="category" id="category" value="{{ old('category') }}" placeholder="Posisi Pekerjaan">
                                                     </div>
                                                  
-                                                
-                                                  
-                                                    
-
-                                                    
-                                                  
-                                                  
                                                     <div class="card-action">
                                                         <button type="submit" class="btn btn-primary" id="alert_demo_3_5">Submit</button>
                                                         <a href="/dashboard/kost" class="btn btn-danger" on>Cancel</a>

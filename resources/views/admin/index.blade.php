@@ -51,7 +51,7 @@
 								</div>
 								<div class="col col-stats ml-3 ml-sm-0">
 									<div class="numbers">
-										<p class="card-category">Company</p>
+										<p class="card-category">Kost</p>
 										<h4 class="card-title"></h4>
 									</div>
 								</div>
@@ -65,12 +65,12 @@
 							<div class="row align-items-center">
 								<div class="col-icon">
 									<div class="icon-big text-center icon-success bubble-shadow-small">
-										<i class="flaticon-graph"></i>
+										<i class="fas fa-home"></i>
 									</div>
 								</div>
 								<div class="col col-stats ml-3 ml-sm-0">
 									<div class="numbers">
-										<p class="card-category">Job</p>
+										<p class="card-category">Room</p>
 										<h4 class="card-title"></h4>
 									</div>
 								</div>
@@ -84,12 +84,12 @@
 							<div class="row align-items-center">
 								<div class="col-icon">
 									<div class="icon-big text-center icon-secondary bubble-shadow-small">
-										<i class="flaticon-users"></i>
+									<i class="fas fa-bed"></i>
 									</div>
 								</div>
 								<div class="col col-stats ml-3 ml-sm-0">
 									<div class="numbers">
-										<p class="card-category">Candidate</p>
+										<p class="card-category">Facilities</p>
 										<h4 class="card-title"></h4>
 									</div>
 								</div>

@@ -22,8 +22,9 @@ class CreateRoomsTable extends Migration
             $table->integer('stock');
             $table->string('types');
 
-
             $table->timestamps();
+            $table->softDeletes();
+
         });
     }
 

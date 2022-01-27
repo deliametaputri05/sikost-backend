@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\JobRequest;
-use App\Models\Company;
-use App\Models\Job;
 use Illuminate\Http\Request;
+use App\Http\Requests\RoomRequest;
+use App\Models\User;
+use App\Models\Facilities;
+use App\Models\Kost;
+use App\Models\Room;
 use Illuminate\Support\Facades\Auth;
 
-class JobController extends Controller
+class RoomController extends Controller
 {
     //
     /**
@@ -18,10 +20,11 @@ class JobController extends Controller
      */
     public function index()
     {
-        $job = Job::with(['company', 'user'])->paginate();
+        $room = Room::with(['kost'])->paginate();
 
-        return view('admin.job.index', [
-            'job' => $job
+        return view('admin.room.index', [
+            'room' => $room
+            
         ]);
     }
 
@@ -32,8 +35,8 @@ class JobController extends Controller
      */
     public function create()
     {
-        $company = Company::all();
-        return view('admin.job.create', compact('company'));
+        $room = Room::all();
+        return view('admin.room.create', compact('room'));
     }
 
     /**
@@ -42,16 +45,16 @@ class JobController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(JobRequest $request)
+    public function store(Request $request)
     {
 
 
         $data = $request->all();
         $data['user_id'] = Auth::user()->id;
-        Job::create($data);
+        Room::create($data);
         // dd($data);
 
-        return redirect()->route('job.index');
+        return redirect()->route('room.index');
     }
 
     /**
@@ -60,7 +63,7 @@ class JobController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Job $job)
+    public function show(Room $room)
     {
         //
     }
@@ -71,14 +74,15 @@ class JobController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Job $job)
+    public function edit($id)
     {
-        $company = Company::all();
+        $room = Room::find($id);
+        // $room = Room::with('kost')->where('id', $id)->get();
 
-        return view('admin.job.edit', [
-            'item' => $job,
-            'company' => $company
-        ]);
+        return view('admin.room.edit', compact('room')
+            // 'room' => $room,
+            // 'kost' => $kost
+);
     }
 
     /**
@@ -88,7 +92,7 @@ class JobController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(JobRequest $request, Job $job)
+    public function update(Request $request, Room $room)
     {
         $data = $request->all();
 
@@ -96,9 +100,9 @@ class JobController extends Controller
         //     $data['picturePath'] = $request->file('picturePath')->store('assets/job', 'public');
         // }
 
-        $job->update($data);
+        $room->update($data);
 
-        return redirect()->route('job.index');
+        return redirect()->route('room.index');
     }
 
     /**
@@ -107,10 +111,10 @@ class JobController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Job $job)
+    public function destroy(Room $room)
     {
-        $job->delete();
+        $room->delete();
 
-        return redirect()->route('job.index');
+        return redirect()->route('room.index');
     }
 }

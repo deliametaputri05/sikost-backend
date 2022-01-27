@@ -70,12 +70,12 @@
 
                                                 <div class="col-md-6 col-lg-8">
                                                     <div class="form-group">
-                                                        <label for="name">Nama Perusahaan</label>
+                                                        <label for="name">Name Kost</label>
                                                         <input type="text" class="form-control" id="name" name="name" value="{{ old('name') ?? $item->name }}" placeholder="Nama Perusahaan" >
 
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="picturePath">Logo</label>
+                                                        <label for="picturePath">Pic Kost</label>
                                                         <input type="file" class="form-control-file"  id="picturePath" name="picturePath" placeholder="Logo Perusahaan" >
                                                         <br>
                                                         <div class="avatar avatar-xl">
@@ -83,15 +83,15 @@
                                                         </div>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="desc">Deskripsi Perusahaan</label>
+                                                        <label for="desc">Desc Kost</label>
                                                         <textarea class="form-control" value="{{ old('desc') ?? $item->desc }}" name="desc" id="desc" rows="3" placeholder="Deskripsi Perusahaan" required>{{$item->desc}}</textarea>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="location">Lokasi</label>
+                                                        <label for="location">Location</label>
                                                         <input type="text" class="form-control" id="location" name="location" value="{{ old('location') ?? $item->location }}" placeholder="Lokasi Perusahaan" required>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="category">Kategori</label>
+                                                        <label for="category">Category</label>
                                                         <input type="text" class="form-control" name="category" id="category" value="{{ old('category') ?? $item->category }}" placeholder="Posisi Pekerjaan" required
                                                         >
                                                     </div>
@@ -99,7 +99,7 @@
                                                    
                                                     <div class="card-action">
                                                         <button type="submit" class="btn btn-primary" id="alert_demo_3_6">Update</button>
-                                                        <a href="/dashboard/job" class="btn btn-danger" on>Cancel</a>
+                                                        <a href="/dashboard/kost" class="btn btn-danger" on>Cancel</a>
 
                                                     </div>
 

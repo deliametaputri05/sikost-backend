@@ -248,12 +248,12 @@
                             <div class="collapse" id="jobs">
                                 <ul class="nav nav-collapse">
                                     <li>
-                                        <a href="/dashboard/job">
+                                        <a href="/dashboard/room">
                                             <span class="sub-item">Data Room</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/dashboard/job/create">
+                                        <a href="/dashboard/room/create">
                                             <span class="sub-item">Create Room</span>
                                         </a>
                                     </li>
@@ -264,7 +264,7 @@
                         </li>
                         <li class="nav-item">
                             <a data-toggle="collapse" href="#sidebarLayouts">
-                                <i class="far fa-envelope"></i>
+                                <i class="fas fa-bed"></i>
                                 <p>Facillities</p>
                                 <span class="caret"></span>
                             </a>
@@ -275,11 +275,11 @@
                                             <span class="sub-item">Facillities</span>
                                         </a>
                                     </li>
-                                    {{-- <li>
+                                    <li>
                                         <a href="overlay-sidebar.html">
                                             <span class="sub-item">File CV</span>
                                         </a>
-                                    </li> --}}
+                                    </li>
 
                                 </ul>
                             </div>

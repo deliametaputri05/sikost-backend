@@ -2,9 +2,9 @@
 
 use App\Http\Controllers\API\MidtransController;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\JobController;
+use App\Http\Controllers\RoomController;
 use App\Http\Controllers\ApplyController;
-use App\Http\Controllers\EducationController;
+use App\Http\Controllers\FacilitiesController;
 use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\KostController;
 use App\Http\Controllers\UserController;
@@ -35,7 +35,7 @@ Route::prefix('dashboard')
     ->group(function () {
         Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
         Route::resource('users', UserController::class);
-        Route::resource('job', JobController::class);
+        Route::resource('room', RoomController::class);
         Route::resource('apply', ApplyController::class);
         Route::resource('kost', KostController::class);
         Route::resource('education', EducationController::class);
@@ -44,8 +44,8 @@ Route::prefix('dashboard')
         Route::get('user/create', [UserController::class, 'create'])->name('users.create');
 
 
-        Route::get('company/create', [CompanyController::class, 'create'])->name('companies.create');
-        Route::get('job/create', [JobController::class, 'create'])->name('jobs.create');
+        Route::get('facilities/create', [FacilitiesController::class, 'create'])->name('facilitieses.create');
+        Route::get('room/create', [RoomController::class, 'create'])->name('rooms.create');
 
         Route::get('transactions/{id}/status/{status}', [TransactionController::class, 'changeStatus'])->name('transactions.changeStatus');
         Route::resource('transactions', TransactionController::class);

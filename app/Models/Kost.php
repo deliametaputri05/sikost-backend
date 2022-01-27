@@ -40,4 +40,9 @@ class Kost extends Model
     {
         return config('app.url') . Storage::url($this->attributes['picturePath']);
     }
+
+    public function room()
+    {
+        return $this->belongsTo(Room::class);
+    }
 }
